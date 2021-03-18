@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const SpeakerCard = (props) => {
+const InfoCard = (props) => {
     return(
         <div className="speaker-container">
             <Card className="card">
@@ -17,4 +17,4 @@ const SpeakerCard = (props) => {
     )
 }
 
-export default SpeakerCard;
+export default InfoCard;

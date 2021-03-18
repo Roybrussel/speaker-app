@@ -1,6 +1,6 @@
 import React from "react";
 
-import CompanyCard from "../CompanyCard/CompanyCard";
+import InfoCard from "../InfoCard/InfoCard";
 
 const Companies = () => {
 
@@ -27,7 +27,7 @@ const Companies = () => {
             <h1>COMPANY STANDS</h1>
             <div className="card-row">
                 {companies.map(company => 
-                    <CompanyCard
+                    <InfoCard
                         image={company.image}
                         name={company.name}
                         about={company.about}

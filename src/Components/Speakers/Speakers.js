@@ -1,6 +1,6 @@
 import React from "react";
 
-import SpeakerCard from "../SpeakerCard/SpeakerCard";
+import InfoCard from "../InfoCard/InfoCard";
 
 const Speakers = () => {
 
@@ -27,7 +27,7 @@ const Speakers = () => {
             <h1>SPEAKERS</h1>
             <div className="card-row">
                 {speakers.map(speaker => 
-                    <SpeakerCard
+                    <InfoCard
                         image={speaker.image}
                         name={speaker.name}
                         about={speaker.about}
