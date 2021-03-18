@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Menu />
+      <Menu /> 
       <Searchbar />
-      <Speakers />
+      <Speakers /> 
       <Footer />
     </div>
   );
