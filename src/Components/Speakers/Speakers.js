@@ -23,7 +23,7 @@ const Speakers = () => {
     ]
 
     return(
-        <div className="speakers-container">
+        <div className="card-container">
             <h1>SPEAKERS</h1>
             <div className="card-row">
                 {speakers.map(speaker => 
