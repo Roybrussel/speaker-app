@@ -1,32 +1,40 @@
 import React from "react";
 
-import Speaker from "../Speaker/Speaker";
+import SpeakerCard from "../SpeakerCard/SpeakerCard";
 
-const Speakers = (props) => {
+const Speakers = () => {
 
     const speakers = [
         {
-            image: "speaker-component-1124.png",
-            name: "Douglas Crockford"
+            image: "billgates.jpg",
+            name: "Bill Gates",
+            about: "An American business magnate, software developer, investor, author, and philanthropist. He is a co-founder of Microsoft Corporation."
         },
         {
-            image: "speaker-component-1530.png",
-            name: "Tamara Baker"
+            image: "elonmusk.jpg",
+            name: "Elon Musk",
+            about: "A business magnate, industrial designer, and engineer.[3] He is the founder, CEO, CTO, and chief designer of SpaceX; early investor,[b] CEO, and product architect of Tesla, Inc.; founder of The Boring Company; co-founder of Neuralink; and co-founder and initial co-chairman of OpenAI."
         },
         {
-            image: "speaker-component-10803.png",
-            name: "Eugene Chuvyrov"
+            image: "douglascrockford.jpg",
+            name: "Douglas Crockford",
+            about: "An American computer programmer and entrepreneur who is involved in the development of the JavaScript language. He popularized the data format JSON (JavaScript Object Notation), and has developed various JavaScript related tools such as JSLint and JSMin."
         }
     ]
 
     return(
-        <div>
-            {speakers.map(speaker => 
-                    <Speaker
+        <div className="speakers-container">
+            <h1>SPEAKERS</h1>
+            <div className="card-row">
+                {speakers.map(speaker => 
+                    <SpeakerCard
                         image={speaker.image}
                         name={speaker.name}
+                        about={speaker.about}
                         key={speaker.name}
-                    /> )}
+                    />
+                )}
+            </div>
         </div>
     )
 }
