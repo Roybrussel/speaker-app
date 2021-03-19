@@ -1,5 +1,7 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
+
+import Heartbutton from "../Heartbutton/Heartbutton";
 
 const InfoCard = (props) => {
     return(
@@ -7,7 +9,14 @@ const InfoCard = (props) => {
             <Card className="card">
                 <Card.Img variant="top" className="card-img" src={`images/${props.image}`} alt={props.name} key={props.key} />
                 <Card.Body>
-                    <Card.Title><h3>{props.name}</h3></Card.Title>
+                    <Card.Title>
+                        <Container>
+                            <Row className="card-top-row">
+                                <Col><h3>{props.name}</h3></Col>
+                                <Col><Heartbutton /></Col>
+                            </Row>
+                        </Container>
+                    </Card.Title>
                     <Card.Text className="card-text">
                         <p>{props.about}</p>
                     </Card.Text>

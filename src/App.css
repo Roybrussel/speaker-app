@@ -22,6 +22,16 @@
   object-fit: cover;
 }
 
+.card-top-row {
+  display: flex;
+  align-items: center;
+}
+
+.heart-col {
+  display: flex;
+  align-items: flex-end;
+}
+
 .card-text {
   text-align: justify;
 }

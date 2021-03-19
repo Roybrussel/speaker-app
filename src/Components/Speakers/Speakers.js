@@ -19,7 +19,7 @@ const Speakers = () => {
             image: "douglascrockford.jpg",
             name: "Douglas Crockford",
             about: "An American computer programmer and entrepreneur who is involved in the development of the JavaScript language. He popularized the data format JSON (JavaScript Object Notation), and has developed various JavaScript related tools such as JSLint and JSMin."
-        }
+        } 
     ]
 
     return(
