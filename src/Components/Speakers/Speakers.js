@@ -2,7 +2,7 @@ import React from "react";
 
 import InfoCard from "../InfoCard/InfoCard";
 
-const Speakers = () => {
+const Speakers = (props) => {
 
     const speakers = [
         {
@@ -26,14 +26,19 @@ const Speakers = () => {
         <div className="card-container">
             <h1>SPEAKERS</h1>
             <div className="card-row">
-                {speakers.map(speaker => 
-                    <InfoCard
-                        image={speaker.image}
-                        name={speaker.name}
-                        about={speaker.about}
-                        key={speaker.name}
-                    />
-                )}
+                {speakers
+                    .filter((rec) => {
+                        const targetString = `${rec.name}`.toLowerCase();
+                        return props.searchQuery.length === 0 ? true : targetString.includes(props.searchQuery.toLowerCase());
+                    })
+                    .map(speaker => 
+                        <InfoCard
+                            image={speaker.image}
+                            name={speaker.name}
+                            about={speaker.about}
+                            key={speaker.name}
+                        />
+                    )}
             </div>
         </div>
     )

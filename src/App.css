@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 25em;
 }
 
 .card {
@@ -34,4 +35,18 @@
 
 .card-text {
   text-align: justify;
+}
+
+/* SEARCHBAR */
+
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+#searchbar {
+  width: 50%;
+  height: 50px;
+  font-size: 40px;
 }

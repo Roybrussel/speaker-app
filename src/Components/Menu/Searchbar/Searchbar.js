@@ -1,9 +1,15 @@
 import React from "react";
 
-const Searchbar = () => {
+const Searchbar = (props) => {
     return(
-        <div>
-            <img src="images/searchbar.gif" alt="searchbar-img" />
+        <div className="searchbar-container">
+            <input
+                id="searchbar"
+                type="text"
+                placeholder="Search by name"
+                value={props.searchGuery}
+                onChange={(e) => props.setSearchQuery(e.target.value)}
+            />
         </div>
     )
 }

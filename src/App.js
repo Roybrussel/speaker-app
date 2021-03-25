@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 
 import Header from "./Components/Header/Header";
@@ -9,13 +9,25 @@ import Companies from "./Components/Companies/Companies";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
+
+  const [searchQuery, setSearchQuery] = useState("");
+  
   return (
     <div className="App">
       <Header />
       <Menu /> 
-      <Searchbar />
-      <Speakers /> 
-      <Companies />
+      <Searchbar 
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
+      <Speakers 
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      /> 
+      <Companies 
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
       <Footer />
     </div>
   );
