@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Heartbutton = () => {
 
+    const [isFavorite, setFavorite] = useState("false");
+
+    const handleToggle = () => {
+        setFavorite(!isFavorite);
+    }
+
     return(
-        <i class="fas fa-heart"></i>
+        <i className={isFavorite ? "far fa-heart" : "fas fa-heart"} onClick={handleToggle}></i>
     )
 }
 
