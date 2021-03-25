@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-const Heartbutton = () => {
+const Heartbutton = (props) => {
 
-    const [isFavorite, setFavorite] = useState("false");
+    const [isFavorite, setIsFavorite] = useState("false");
 
     const handleToggle = () => {
-        setFavorite(!isFavorite);
+        setIsFavorite(!isFavorite);
+        
     }
 
     return(

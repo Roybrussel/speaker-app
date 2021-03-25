@@ -13,7 +13,11 @@ const InfoCard = (props) => {
                         <Container>
                             <Row className="card-top-row">
                                 <Col><h3>{props.name}</h3></Col>
-                                <Col><Heartbutton /></Col>
+                                <Col>
+                                    <Heartbutton 
+                                        isFavorite={props.isFavorite}
+                                    />
+                                </Col>
                             </Row>
                         </Container>
                     </Card.Title>
